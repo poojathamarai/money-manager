@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useHistory } from 'react-router-dom';
 
-export function Add_income({ incomelist, setIncomeList }) {
+export function AddIncome({ incomelist, setIncomeList }) {
   const [date, setDate] = useState('');
   const [amount, setAmount] = useState('');
   const [data, setData] = useState('');
