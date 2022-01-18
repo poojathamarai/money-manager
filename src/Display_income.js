@@ -1,6 +1,6 @@
 import { Show } from './Show';
 
-export function Display_income({ incomelist }) {
+export function DisplayIncome({ incomelist }) {
   return (
     <div className="income-list">
       {incomelist.map(({ date, amount, data }) => <Show
