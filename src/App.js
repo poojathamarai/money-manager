@@ -1,12 +1,12 @@
 
 import './App.css';
 import {Switch,Route,Link} from "react-router-dom";
-import { Display_expense } from './Display_expense';
+import { DisplayExpense } from './Display_expense';
 import { NotFound } from './NotFound';
-import { Display_income } from './Display_income';
+import { DisplayIncome } from './Display_income';
 import { useState } from 'react';
-import { Add_income } from './Add_income';
-import { Add_expense } from './Add_expense';
+import { AddIncome } from './Add_income';
+import { AddExpense } from './Add_expense';
 function App() {
   const income=[
     {  
@@ -38,10 +38,10 @@ function App() {
         </div>
         <Switch>
         <Route exact path="/"> HELLO WORLD</Route>
-        <Route path="/add/income"><Add_income incomelist={incomelist} setIncomeList={setIncomeList}/></Route>
-        <Route path="/add/expense"><Add_expense expenselist={expenselist} setExpenseList={setExpenseList}/></Route>
-        <Route path="/summary/income"><Display_income incomelist={incomelist}/></Route>
-      <Route path="/summary/expense"><Display_expense expenselist={expenselist}/></Route>
+        <Route path="/add/income"><AddIncome incomelist={incomelist} setIncomeList={setIncomeList}/></Route>
+        <Route path="/add/expense"><AddExpense expenselist={expenselist} setExpenseList={setExpenseList}/></Route>
+        <Route path="/summary/income"><DisplayIncome incomelist={incomelist}/></Route>
+      <Route path="/summary/expense"><DisplayExpense expenselist={expenselist}/></Route>
         <Route path="**">
           <NotFound/>
         </Route>
